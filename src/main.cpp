@@ -27,11 +27,11 @@ int main() {
     uart_new_line(); // auto scroll in terminal
 
     _delay_ms(500); // Delay for readability
-    brightness += 10; // Increase brightness by 20%
-    if (brightness > 255) {
-        brightness = 0; // Reset brightness if it exceeds 255
+    if (voltage > 2.5) {
+      led.adjust_brightness(255); // Set LED to maximum brightness
+    } else {
+      led.adjust_brightness(50); // Set LED to low brightness
     }
-    led.adjust_brightness(brightness); // Update LED brightness
   }
   return 0;
 }
