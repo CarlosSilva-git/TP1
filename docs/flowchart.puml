@@ -1,0 +1,33 @@
+@startuml Program Flow
+
+!theme plain
+skinparam backgroundColor white
+
+start
+
+:Initialize ADC;
+:Initialize UART (9600 baud);
+:Create LED object (Pin PB5);
+:Turn on LED;
+:Set initial LED brightness (128);
+
+while (Program Running?) is (yes)
+    :Read ADC value from channel 0;
+    :Convert ADC value to voltage;
+    :Format voltage string;
+    
+    :Send voltage via UART;
+    :Add new line character;
+    
+    if (voltage > 2.5V?) then (yes)
+        :Set LED brightness to maximum (255);
+    else (no)
+        :Set LED brightness to low (50);
+    endif
+    
+    :Delay 500ms;
+endwhile (no)
+
+stop
+
+@enduml
