@@ -1,5 +1,6 @@
 #include "uart.h"
 #include "adc.h"
+#include "io.h"
 #include <avr/io.h>
 #include <stdio.h>
 
@@ -9,6 +10,10 @@ int main() {
   uint16_t value;
   char buffer[10];
   char info_string[50] = "";
+  uint8_t brightness = 128; // Example brightness value (0-255)
+  LED led(5); // Initialize LED on pin PB5 (Arduino pin 13)
+  led.on(); // Turn on the LED
+  led.adjust_brightness(brightness); // Set LED brightness to 50%
   
   while (1) {
     value = adc_read(0); // Read from ADC channel 0 (e.g., PC0)
@@ -22,6 +27,11 @@ int main() {
     uart_new_line(); // auto scroll in terminal
 
     _delay_ms(500); // Delay for readability
+    brightness += 10; // Increase brightness by 20%
+    if (brightness > 255) {
+        brightness = 0; // Reset brightness if it exceeds 255
+    }
+    led.adjust_brightness(brightness); // Update LED brightness
   }
   return 0;
 }
