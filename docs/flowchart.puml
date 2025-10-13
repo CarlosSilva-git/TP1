@@ -11,7 +11,7 @@ start
 :Turn on LED;
 :Set initial LED brightness (128);
 
-while (Program Running?) is (yes)
+while (Running?) is (yes)
     :Read ADC value from channel 0;
     :Convert ADC value to voltage;
     :Format voltage string;
@@ -26,7 +26,7 @@ while (Program Running?) is (yes)
     endif
     
     :Delay 500ms;
-endwhile (no)
+endwhile
 
 stop
 
