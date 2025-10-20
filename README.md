@@ -16,18 +16,15 @@ int main()
 }
 ```
 
-
-
-
 ## ATmega328P ADC Conversion Formula
 
 The ADC conversion result for the ATmega328P can be calculated using the following formula:
 
-\[
+$$
 V_{OUT} = \frac{ADC \times V_{REF}}{1024}
-\]
+$$
 
 Where:
-- \( V_{OUT} \): The analog voltage corresponding to the digital value.
-- \( ADC \): The 10-bit digital value (0 to 1023) obtained from the ADC.
-- \( V_{REF} \): The reference voltage used for the ADC.
+- $V_{OUT}$: The analog voltage corresponding to the digital value.
+- $ADC$: The 10-bit digital value (0 to 1023) obtained from the ADC.
+- $V_{REF}$: The reference voltage used for the ADC.
