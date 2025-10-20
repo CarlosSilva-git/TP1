@@ -28,3 +28,14 @@ Where:
 - $V_{OUT}$: The analog voltage corresponding to the digital value.
 - $ADC$: The 10-bit digital value (0 to 1023) obtained from the ADC.
 - $V_{REF}$: The reference voltage used for the ADC.
+
+
+## Documentation
+
+Application flowchart can be found on: **[flow-char](docs/Program%20Flow.png)**
+
+Current capabilities:
+- UART write modules (string, integer, float, ...)
+- Pseudo PWM using built-in timers to change brightness on built-in LED
+- ADC read and conversion using AVDD as reference
+
