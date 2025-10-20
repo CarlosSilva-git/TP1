@@ -1,6 +1,6 @@
 @startuml Program Flow
 
-!theme plain
+!theme minty
 skinparam backgroundColor white
 
 start
@@ -11,7 +11,7 @@ start
 :Turn on LED;
 :Set initial LED brightness (128);
 
-while (Running?) is (yes)
+while (Running?) is (Yes)
     :Read ADC value from channel 0;
     :Convert ADC value to voltage;
     :Format voltage string;
@@ -23,10 +23,9 @@ while (Running?) is (yes)
         :Set LED brightness to maximum (255);
     else (no)
         :Set LED brightness to low (50);
-    endif
-    
+    endif 
     :Delay 500ms;
-endwhile
+endwhile (No)
 
 stop
 
