@@ -38,4 +38,5 @@ Current capabilities:
 - UART write modules (string, integer, float, ...)
 - Pseudo PWM using built-in timers to change brightness on built-in LED
 - ADC read and conversion using AVDD as reference
+- Full PlatformIO compatible develop project
 

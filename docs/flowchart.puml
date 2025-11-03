@@ -1,7 +1,7 @@
 @startuml Program Flow
 
-!theme minty
-skinparam backgroundColor white
+!theme superhero
+skinparam backgroundColor grey
 
 start
 
@@ -23,7 +23,7 @@ while (Running?) is (Yes)
         :Set LED brightness to maximum (255);
     else (no)
         :Set LED brightness to low (50);
-    endif 
+    endif
     :Delay 500ms;
 endwhile (No)
 
